@@ -10,7 +10,7 @@ on:
       - 'SEED/extra.cfg'
       - 'SCRIPTS/switch'
   watch:
-    types: [started]
+   types: [started]
 
 jobs:
   build:
