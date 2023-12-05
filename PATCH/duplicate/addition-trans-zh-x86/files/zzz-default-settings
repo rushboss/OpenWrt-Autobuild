@@ -20,7 +20,7 @@ uci commit uhttpd
 /etc/init.d/uhttpd restart
 
 #Defalut lan IP
-uci set network.lan.ipaddr=192.168.1.1
+uci set network.lan.ipaddr=10.0.0.1
 
 #Remove IPv6
 uci delete network.globals.ula_prefix
