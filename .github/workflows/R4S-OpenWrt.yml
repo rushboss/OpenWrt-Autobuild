@@ -9,7 +9,7 @@ on:
       - 'SEED/R4S/config.seed'
       - 'SEED/extra.cfg'
       - 'SCRIPTS/switch'
-  watch:
+ # watch:
 #  types: [started]
 
 jobs:
