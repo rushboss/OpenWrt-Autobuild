@@ -7,7 +7,14 @@ uci commit luci
 #Timezone UTC+10/+11
 uci set system.@system[0].zonename='Asia/Shanghai'
 uci set system.@system[0].timezone='CST-8'
+uci del system.ntp.server
+uci add_list system.ntp.server='ntp.aliyun.com'
+uci add_list system.ntp.server='cn.ntp.org.cn'
+uci add_list system.ntp.server='ntp.ntsc.ac.cn'
 uci commit system
+
+#Feeds 更换镜像源
+sed -i 's,downloads.openwrt.org,mirror.sjtu.edu.cn/openwrt,g' /etc/opkg/distfeeds.conf
 
 #uhttpd
 uci set uhttpd.main.rfc1918_filter=0
