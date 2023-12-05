@@ -7,6 +7,10 @@ uci commit luci
 #Timezone UTC+10/+11
 uci set system.@system[0].zonename='Asia/Shanghai'
 uci set system.@system[0].timezone='CST-8'
+uci del system.ntp.server
+uci add_list system.ntp.server='ntp.aliyun.com'
+uci add_list system.ntp.server='cn.ntp.org.cn'
+uci add_list system.ntp.server='ntp.ntsc.ac.cn'
 uci commit system
 
 #uhttpd
