@@ -28,7 +28,7 @@ uci commit uhttpd
 sed -i 's,downloads.openwrt.org,mirror.sjtu.edu.cn/openwrt,g' /etc/opkg/distfeeds.conf
 
 #Defalut lan IP
-uci set network.lan.ipaddr=10.0.0.1
+uci set network.lan.ipaddr=192.168.11.1
 
 #Remove IPv6
 uci delete network.globals.ula_prefix
